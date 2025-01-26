@@ -138,10 +138,10 @@ footer {
         background-position: top;              /* Adjust background positioning */
     }
     .hero h1 {
-        font-size: 1.5rem;              /* Even smaller heading on extra small screens */
+        font-size: 2rem;              /* Even smaller heading on extra small screens */
     }
     .hero p {
-        font-size: 2rem;              /* Smaller paragraph text */
+        font-size: 1.4rem;              /* Smaller paragraph text */
     }
     .buttons .btn {
         padding: 0.5rem 0.8rem;              /* Further reduce button padding */

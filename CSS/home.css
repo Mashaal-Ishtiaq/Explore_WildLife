@@ -46,34 +46,32 @@ main {
     background-size: cover;              /* Ensure image covers the section */
     background-position: center;              /* Center the image */
     color: white;              /* White text color */
-    position: relative;              /* Allow absolute positioning of content if needed */
     box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);              /* Add shadow for depth */
-    width: 100%;              /* Full width */
     min-height: 60vh;              /* Minimum height for the section */
-    max-width: 100vw;              /* Prevent overflow */
-    overflow: hidden;              /* Prevent overflow */
 }
 
 .hero h1 {
     font-size: 2.5rem;              /* Font size for heading */
     margin-bottom: 1rem;              /* Space below heading */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);              /* Add text shadow for readability */
 }
 
 .hero p {
     font-size: 1.2rem;              /* Font size for paragraph */
     margin-bottom: 2rem;              /* Space below paragraph */
+    line-height: 1.5;
 }
 
 .buttons .btn {
-    display: inline-block;              /* Display button inline */
-    padding: 0.8rem 1.5rem;              /* Button padding */
-    background: #4CAF50;              /* Button background color */
-    color: #fff;              /* Button text color */
-    text-decoration: none;              /* Remove underline from button */
-    border-radius: 8px;              /* Round button corners */
-    font-size: 1rem;              /* Button text size */
-    transition: background 0.3s;              /* Smooth background transition */
+    display: inline-block;                    /* Display button inline */
+    padding: 0.8rem 1.5rem;                  /* Button padding */
+    background: #4CAF50;                     /* Button background color */
+    color: #fff;                              /* Button text color */
+    text-decoration: none;                    /* Remove underline from button */
+    border-radius: 8px;                      /* Round button corners */
+    font-size: 1rem;                          /* Button text size */
+    transition: background 0.3s;             /* Smooth background transition */
+    margin-top: 1rem;                        /* Space above the button */
+               /* Smooth background transition */
 }
 
 .buttons .btn:hover {
@@ -116,7 +114,7 @@ footer {
         font-size: 2rem;              /* Smaller heading on mobile */
     }
     .hero p {
-        font-size: 1rem;              /* Smaller paragraph text */
+        font-size: 2.5rem;              /* Smaller paragraph text */
     }
     .buttons .btn {
         padding: 0.6rem 1rem;              /* Smaller button padding */
@@ -143,7 +141,7 @@ footer {
         font-size: 1.5rem;              /* Even smaller heading on extra small screens */
     }
     .hero p {
-        font-size: 0.9rem;              /* Smaller paragraph text */
+        font-size: 2rem;              /* Smaller paragraph text */
     }
     .buttons .btn {
         padding: 0.5rem 0.8rem;              /* Further reduce button padding */

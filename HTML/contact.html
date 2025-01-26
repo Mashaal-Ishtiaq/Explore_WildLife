@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="/CSS/contact.css"> <!-- Link to CSS stylesheet -->
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="/index.html" class="home-link">Home</a> <!-- Home link -->
+        </nav>
+    </header>
+    <div class="container">
+        <div class="box">
+            <h2>Contact Us</h2> <!-- Contact form heading -->
+            <form id="contactForm" onsubmit="return handleFormSubmit(event)"> <!-- Contact form -->
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required> <!-- Name input -->
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required> <!-- Email input -->
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" placeholder="Write your message" required></textarea> <!-- Message textarea -->
+                <button type="submit">Send</button> <!-- Submit button -->
+            </form>
+
+            <div id="successMessage" style="display: none;"> <!-- Success message container -->
+                <p>Your message has been sent successfully!</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function handleFormSubmit(event) {
+            event.preventDefault(); // Prevent the form from submitting traditionally
+
+            // Display the success message
+            document.getElementById("successMessage").style.display = "block";
+
+            // Optionally, clear the form fields after submission
+            document.getElementById("contactForm").reset();
+        }
+    </script>
+</body>
+
+</html>

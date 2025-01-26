@@ -1,0 +1,108 @@
+body {
+    font-family: 'Arial', sans-serif;                     /* Set font for the body */
+    margin: 0;                     /* Remove default margin */
+    padding: 0;                     /* Remove default padding */
+    background-color: #1b252f;                     /* Dark background color */
+    background-size: cover;                     /* Cover entire background */
+    width: 100%;                     /* Full width */
+    height: 100vh;                     /* Full viewport height */
+    overflow-x: hidden;                     /* Prevent horizontal scrolling */
+}
+
+            /* Header styles */
+header {
+    position: relative;                     /* Allows absolute positioning of nav items */
+    padding: 10px 0;                     /* Space around the header */
+}
+
+nav {
+    display: flex;                     /* Use flexbox for navigation layout */
+    justify-content: flex-start;                     /* Align nav items to the left */
+    padding: 10px;                     /* Add padding for spacing */
+}
+
+.home-link {
+    color: white;                     /* White font color */
+    font-size: 1.2rem;                     /* Slightly larger font size */
+    text-decoration: none;                     /* Remove underline */
+    transition: color 0.3s;                     /* Smooth color transition */
+}
+
+         /* Change color on hover */
+.home-link:hover {
+    color: green;                     /* Change color on hover */
+}
+
+         /* Responsive container adjustments */
+.container {
+    display: flex;                     /* Use flexbox for layout */
+    justify-content: center;                     /* Center content horizontally */
+    align-items: center;                     /* Center content vertically */
+    height: calc(100vh - 60px);                     /* Adjust height considering the header */
+    box-sizing: border-box;                     /* Ensure padding is included in dimensions */
+}
+
+            /* Responsive box styling */
+.box {
+    background-color: #2e4463;                     /* Medium brown background color */
+    padding: 40px;                     /* Padding inside the box */
+    border-radius: 25px;                     /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);                     /* Shadow for depth */
+    color: white;                     /* Text color inside the box */
+    width: 100%;                     /* Full width */
+    max-width: 350px;                     /* Ensure it doesn't exceed the screen width */
+}
+
+             /* Responsive form elements */
+.box input[type="text"],
+.box input[type="email"],
+.box textarea {
+    padding: 10px;                     /* Padding inside form elements */
+    margin-bottom: 15px;                     /* Space below each element */
+    border: none;                     /* Remove border */
+    border-radius: 5px;                     /* Rounded corners */
+    width: 100%;                     /* Full width */
+    font-size: 1rem;                     /* Font size for input */
+    box-sizing: border-box;                     /* Include padding in width calculations */
+}
+
+             /* Placeholder styling */
+input::placeholder {
+    color: #888;                     /* Light color for placeholder text */
+}
+
+             /* Responsive button */
+.box button {
+    background-color: #28344f;                     /* Dark brown background for button */
+    color: white;                     /* Button text color */
+    border: none;                     /* Remove border */
+    padding: 10px;                     /* Padding inside button */
+    border-radius: 5px;                     /* Rounded corners */
+    cursor: pointer;                     /* Change cursor to pointer on hover */
+    transition: background-color 0.3s;                     /* Smooth background color transition */
+    font-size: 16px;                     /* Font size for button */
+    width: 100%;                     /* Full width for button */
+}
+
+.box button:hover {
+    background-color: #181d38;                     /* Darker brown on hover */
+}
+
+             /* Media query for smaller devices */
+@media (max-width: 768px) {
+    nav {
+        padding: 5px;                     /* Reduce padding for smaller screens */
+    }
+
+    .home-link {
+        font-size: 1rem;                     /* Adjust font size for smaller screens */
+    }
+
+    .box {
+        padding: 30px;                     /* Adjust padding for compact design */
+    }
+
+    .box h2 {
+        font-size: 1.5rem;                     /* Reduce title size for smaller screens */
+    }
+}

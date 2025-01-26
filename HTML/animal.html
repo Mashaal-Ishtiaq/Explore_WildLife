@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animal Kingdom</title>
+    <link rel="stylesheet" href="/CSS/animal.css"><!-- Link to CSS stylesheet -->
+</head>
+<body>
+ <header>
+    <nav>
+        <a href="/index.html" class="home-link">Home</a><!-- Home link -->
+        
+    </nav>
+ </header> 
+
+    <!-- Kingdom section containing wildlife items -->
+    <div class="kingdom">
+        <!-- List of animal items -->
+        <div class="list">
+            <div class="item">
+                <img src="/images/stag.jpg" alt="Majestic Stag">
+                <div class="content">
+                    <div class="author">By NatureLens</div>
+                    <div class="title">Majestic Stag</div>
+                    <div class="topic">Wildlife</div>
+                    <div class="des">
+                        Emerging from ancient forests, the stag symbolizes strength, grace, and the spirit of the wilderness. Its antlers and movements reflect elegance, making it a cultural and natural icon. Revered in folklore, it stands as a beacon of nature's grandeur and resilience.
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="item">
+                <img src="/images/wolf.jpg" alt="Fierce Wolf">
+                <div class="content">
+                    <div class="author">By WildFocus</div>
+                    <div class="title">Fierce Wolf</div>
+                    <div class="topic">Wildlife</div>
+                    <div class="des">
+                        Wolves are intelligent social creatures with intricate hierarchies and teamwork. Their strategic hunting and communication skills maintain ecological balance, showcasing resilience and adaptability. Their howls echo unity, and their presence shapes ecosystems profoundly.
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="item">
+                <img src="/images/horse.jpg" alt="Freedom's Charge">
+                <div class="content">
+                    <div class="author">By WildFocus</div>
+                    <div class="title">Wild Stallion</div>
+                    <div class="topic">Wilderness Warriors</div>
+                    <div class="des">
+                        Horses embody power, grace, and freedom. Their strong bonds, empathy, and collective decisions highlight intelligence, while the wild stallion represents untamed spirit and independence. Roaming vast landscapes, they symbolize courage and unbreakable strength.
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="item">
+                <img src="/images/elephant.jpg" alt="Gentle Elephant">
+                <div class="content">
+                    <div class="author">By SafariTales</div>
+                    <div class="title">Gentle Elephant</div>
+                    <div class="topic">Wildlife</div>
+                    <div class="des">
+                        Elephants are symbols of wisdom and emotional depth. Their matriarchal societies, long memory, and empathy showcase a profound connection to life, balancing strength with compassion. Guardians of ecosystems, they are nature’s gentle giants of harmony.
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="item">
+                <img src="/images/tiger.jpg" alt="Mighty Tiger">
+                <div class="content">
+                    <div class="author">By JungleBeats</div>
+                    <div class="title">Mighty Tiger</div>
+                    <div class="topic">Wildlife</div>
+                    <div class="des">
+                        Tigers represent evolutionary perfection with unmatched beauty and intelligence. Their solitary nature and ecological significance make them a symbol of strength and nobility. Stealthy hunters, they embody wilderness' raw power and primal elegance.
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <!-- Thumbnails for each animal -->
+        <div class="thumbnail">
+            <div class="item">
+                <img src="/images/stag.jpg" alt="Thumbnail of Majestic Stag">
+                <div class="content">
+                    <div class="title">Majestic Stag</div>
+                    <div class="description">
+                        A beacon of grace and strength in the wild.
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="/images/wolf.jpg" alt="Thumbnail of Fierce Wolf">
+                <div class="content">
+                    <div class="title">Fierce Wolf</div>
+                    <div class="description">
+                        Known for resilience and teamwork.
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="/images/elephant.jpg" alt="Thumbnail of Gentle Elephant">
+                <div class="content">
+                    <div class="title">Gentle Elephant</div>
+                    <div class="description">
+                        A symbol of wisdom and empathy.
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="/images/tiger.jpg" alt="Thumbnail of Mighty Tiger">
+                <div class="content">
+                    <div class="title">Mighty Tiger</div>
+                    <div class="description">
+                        Embodies power and unmatched beauty.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Navigation arrows for sliding -->
+        <div class="arrows">
+            <button id="prev" aria-label="Previous Slide"><</button>
+            <button id="next" aria-label="Next Slide">></button>
+        </div>
+        <!-- Time running display -->
+        <div class="time"></div>
+    </div>
+
+    <script>
+        const list = document.querySelector(".kingdom .list"); // Select the list of items
+        const items = document.querySelectorAll(".kingdom .list .item"); // Select all item elements
+        const prevBtn = document.getElementById("prev"); // Select the previous button
+        const nextBtn = document.getElementById("next"); // Select the next button
+        let currentIndex = 0; // Initialize current index
+
+        // Function to show the current slide
+        function showSlide(index) {
+            items.forEach((item, i) => {
+                item.style.transform = `translateX(${(i - index) * 100}%)`; // Slide items
+            });
+        }
+
+        // Event listener for previous button
+        prevBtn.addEventListener("click", () => {
+            currentIndex = (currentIndex - 1 + items.length) % items.length; // Update index
+            showSlide(currentIndex); // Show updated slide
+        });
+
+        // Event listener for next button
+        nextBtn.addEventListener("click", () => {
+            currentIndex = (currentIndex + 1) % items.length; // Update index
+            showSlide(currentIndex); // Show updated slide
+        });
+
+        // Initialize the kingdom display
+        showSlide(currentIndex);
+    </script>
+</body>
+</html>

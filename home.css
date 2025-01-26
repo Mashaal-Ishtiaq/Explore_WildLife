@@ -1,0 +1,155 @@
+body {
+    font-family: 'Arial', sans-serif;              /* Set font for the body */
+    margin: 0;              /* Remove default margin */
+    padding: 0;              /* Remove default padding */
+    background-color: #f4f4f9;              /* Light background color */
+    color: #333;              /* Dark text color */
+    display: flex;              /* Use flexbox layout */
+    flex-direction: column;              /* Stack children vertically */
+    min-height: 100vh;              /* Ensure body takes full height */
+    overflow-x: hidden;              /* Prevent horizontal scrolling */
+}
+
+header {
+    background: #1b252f;              /* Darker blue-gray for a professional look */
+    color: #ecf0f1;              /* Light color for contrast */
+    padding: 1rem 2rem;              /* Padding for header */
+    position: sticky;              /* Keep header fixed at the top on scroll */
+    top: 0;              /* Align header to the top */
+    z-index: 1000;              /* Ensure header stays on top */
+}
+
+header nav a {
+    color: #ecf0f1;              /* Light color for links */
+    margin-right: 1rem;              /* Spacing between links */
+    text-decoration: none;              /* Remove underline from links */
+    transition: color 0.3s;              /* Smooth color transition */
+}
+
+header nav a:hover {
+    color: #4CAF50;              /* Change link color on hover */
+}
+
+main {
+    flex: 1;              /* Allow main to grow and fill remaining space */
+}
+
+.hero {
+    display: flex;              /* Use flexbox for centering content */
+    flex-direction: column;              /* Stack content vertically */
+    justify-content: center;              /* Center content vertically */
+    align-items: center;              /* Center content horizontally */
+    text-align: center;              /* Center text */
+    padding: 4rem 2rem;              /* Padding for the hero section */
+    background-image: url('/images/home.jpg');              /* Background image */
+    opacity: 0.8;              /* Slight transparency */
+    background-size: cover;              /* Ensure image covers the section */
+    background-position: center;              /* Center the image */
+    color: white;              /* White text color */
+    position: relative;              /* Allow absolute positioning of content if needed */
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);              /* Add shadow for depth */
+    width: 100%;              /* Full width */
+    min-height: 60vh;              /* Minimum height for the section */
+    max-width: 100vw;              /* Prevent overflow */
+    overflow: hidden;              /* Prevent overflow */
+}
+
+.hero h1 {
+    font-size: 2.5rem;              /* Font size for heading */
+    margin-bottom: 1rem;              /* Space below heading */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);              /* Add text shadow for readability */
+}
+
+.hero p {
+    font-size: 1.2rem;              /* Font size for paragraph */
+    margin-bottom: 2rem;              /* Space below paragraph */
+}
+
+.buttons .btn {
+    display: inline-block;              /* Display button inline */
+    padding: 0.8rem 1.5rem;              /* Button padding */
+    background: #4CAF50;              /* Button background color */
+    color: #fff;              /* Button text color */
+    text-decoration: none;              /* Remove underline from button */
+    border-radius: 8px;              /* Round button corners */
+    font-size: 1rem;              /* Button text size */
+    transition: background 0.3s;              /* Smooth background transition */
+}
+
+.buttons .btn:hover {
+    background: #45a049;              /* Darker green on hover */
+}
+
+.info {
+    background-color: #e7f3fe;              /* Light blue background for info section */
+    padding: 2rem;              /* Padding for info section */
+    text-align: center;              /* Center text */
+}
+
+.info h2 {
+    font-size: 2rem;              /* Font size for info heading */
+    margin-bottom: 1rem;              /* Space below heading */
+}
+
+.info p {
+    font-size: 1.1rem;              /* Font size for info paragraph */
+    color: #555;              /* Darker text for contrast */
+}
+
+footer {
+    text-align: center;              /* Center text in footer */
+    padding: 1rem;              /* Padding for footer */
+    background: #1b252f;              /* Match footer with header */
+    color: #ecf0f1;              /* Light color for contrast */
+}
+
+             /* Responsive Design */
+@media screen and (max-width: 768px) {
+    header {
+        padding: 1rem;              /* Adjust padding for smaller screens */
+    }
+    .hero {
+        padding: 3rem 1.5rem;              /* Reduce padding for smaller screens */
+        min-height: 50vh;              /* Reduce minimum height */
+    }
+    .hero h1 {
+        font-size: 2rem;              /* Smaller heading on mobile */
+    }
+    .hero p {
+        font-size: 1rem;              /* Smaller paragraph text */
+    }
+    .buttons .btn {
+        padding: 0.6rem 1rem;              /* Smaller button padding */
+        font-size: 0.9rem;              /* Smaller button text */
+    }
+    .info h2 {
+        font-size: 1.5rem;              /* Smaller heading on mobile */
+    }
+    .info p {
+        font-size: 0.9rem;              /* Smaller paragraph text */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header nav a {
+        margin-right: 0.5rem;              /* Reduce margin for mobile */
+    }
+    .hero {
+        padding: 2rem 1rem;              /* Further reduce padding on very small screens */
+        min-height: 40vh;              /* Further reduce height */
+        background-position: top;              /* Adjust background positioning */
+    }
+    .hero h1 {
+        font-size: 1.5rem;              /* Even smaller heading on extra small screens */
+    }
+    .hero p {
+        font-size: 0.9rem;              /* Smaller paragraph text */
+    }
+    .buttons .btn {
+        padding: 0.5rem 0.8rem;              /* Further reduce button padding */
+        font-size: 0.8rem;              /* Smaller button text */
+    }
+    .info {
+        padding: 1.5rem;              /* Adjust padding for info section on mobile */
+    }
+}

@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+      /* Global Styles */
+body {
+    margin: 0;
+    background-color: #000;                   /* Black background */
+    color: #eee;                   /* Light text color */
+    font-family: 'Poppins', sans-serif;                   /* Font family */
+    font-size: 12px;                   /* Base font size */
+    overflow-x: hidden;                   /* Hide horizontal overflow */
+}
+
+a {
+    text-decoration: none;                   /* Remove underline from links */
+    color: #eee;                   /* Link color */
+}
+
+         /* Header Styles */
+header {
+    position: absolute;                   /* Position header */
+    z-index: 10;                   /* Layer order */
+    width: 100%;
+    max-width: 1140px;                   /* Max width of header */
+    height: 70px;                   /* Header height */
+    margin: auto;                   /* Center header */
+    top: 0;
+    left: 0;
+    padding: 20px;                   /* Header padding */
+    box-sizing: border-box;                   /* Include padding in width/height */
+}
+
+nav {
+    display: flex;                   /* Flexbox layout */
+    justify-content: flex-start;                   /* Align nav items to the left */
+    padding: 10px;                   /* Add padding for spacing */
+}
+
+.home-link {
+    color: white;                   /* White font color */
+    font-size: 1.2rem;                   /* Larger font size */
+    text-decoration: none;                   /* Remove underline */
+    transition: color 0.3s;                   /* Smooth color transition */
+}
+
+         /* Change color on hover */
+.home-link:hover {
+    color: green;                   /* Change color on hover */
+}
+
+         /* Kingdom Section Styles */
+.kingdom {
+    height: 100vh;                   /* Full viewport height */
+    width: 100vw;                   /* Full viewport width */
+    overflow: hidden;                   /* Hide overflow */
+    position: relative;                   /* Relative positioning */
+    margin-top: 0;                   /* No margin at top */
+}
+
+.kingdom .list .item {
+    width: 100%;                   /* Full width */
+    height: 100%;                   /* Full height */
+    position: absolute;                   /* Position absolute */
+    inset: 0;                   /* Align edges */
+}
+
+.kingdom .list .item img {
+    width: 100%;                   /* Full width of image */
+    height: 100%;                   /* Full height of image */
+    object-fit: cover;                   /* Cover the area */
+    object-position: center;                   /* Center the image */
+    opacity: 0.4;                   /* Image opacity */
+    z-index: -1;                   /* Send image to the background */
+    position: absolute;                   /* Absolute positioning */
+}
+
+.kingdom .list .item .content {
+    position: absolute;                   /* Position absolutely */
+    top: 50%;                   /* Center vertically */
+    left: 50%;                   /* Center horizontally */
+    transform: translate(-50%, -50%);                   /* Offset to center */
+    width: 90%;                   /* 90% width */
+    max-width: 1140px;                   /* Max width */
+    padding: 0 15px;                   /* Horizontal padding */
+    box-sizing: border-box;                   /* Include padding in width/height */
+    color: #fff;                   /* White text color */
+    text-align: center;                   /* Center text */
+    z-index: 1;                   /* Layer order */
+    text-shadow: 0 5px 10px rgba(0,0,0,0.3);                   /* Text shadow */
+}
+
+.kingdom .list .item .author {
+    font-weight: bold;                   /* Bold font weight */
+    letter-spacing: 3px;                   /* Space between letters */
+    margin-bottom: 15px;                   /* Margin below author */
+    opacity: 0.55;                   /* Slight opacity */
+}
+
+.kingdom .list .item .title,
+.kingdom .list .item .topic {
+    font-size: 3em;                   /* Large font size */
+    font-weight: bold;                   /* Bold font weight */
+    line-height: 1.3em;                   /* Line height */
+    opacity: 0.5;                   /* Slight opacity */
+}
+
+.kingdom .list .item .topic {
+    color: #f1683a;                   /* Topic color */
+    margin-bottom: 15px;                   /* Margin below topic */
+}
+
+.kingdom .list .item .des {
+    margin-bottom: 20px;                   /* Margin below description */
+    font-size: 1.6em;                   /* Description font size */
+    opacity: 0.5;                   /* Slight opacity */
+}
+
+         /* Thumbnail Styles */
+.thumbnail {
+    display: none;                   /* Hide thumbnails */
+}
+
+         /* Navigation Arrows Styles */
+.arrows {
+    position: absolute;                   /* Position absolute */
+    top: 50%;                   /* Center vertically */
+    width: 100%;                   /* Full width */
+    display: flex;                   /* Flexbox layout */
+    justify-content: space-between;                   /* Space between buttons */
+    padding: 0 15px;                   /* Horizontal padding */
+    box-sizing: border-box;                   /* Include padding in width/height */
+    transform: translateY(-50%);                   /* Offset to center */
+}
+
+.arrows button {
+    width: 40px;                   /* Button width */
+    height: 40px;                   /* Button height */
+    border-radius: 50%;                   /* Round buttons */
+    background-color: rgba(238, 238, 238, 0.2);                   /* Button background color */
+    border: none;                   /* No border */
+    color: #fff;                   /* Button text color */
+    font-family: monospace;                   /* Monospace font */
+    font-weight: bold;                   /* Bold font weight */
+    transition: 0.3s;                   /* Smooth transition */
+    cursor: pointer;                   /* Pointer cursor on hover */
+}
+
+.arrows button:hover {
+    background-color: #fff;                   /* Change background on hover */
+    color: #000;                   /* Change text color on hover */
+}
+
+          /* Responsive Styles */
+@media screen and (max-width: 768px) {
+    .kingdom .list .item .title {
+        font-size: 2em;                   /* Smaller title for medium screens */
+    }
+
+    .kingdom .list .item .topic {
+        font-size: 1.5em;                   /* Smaller topic for medium screens */
+    }
+
+    .kingdom .list .item .des {
+        font-size: 0.9em;                   /* Smaller description for medium screens */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .kingdom .list .item .title {
+        font-size: 1.5em;                   /* Smaller title for small screens */
+    }
+
+    .kingdom .list .item .topic {
+        font-size: 1.2em;                   /* Smaller topic for small screens */
+    }
+
+    .kingdom .list .item .des {
+        font-size: 0.8em;                   /* Smaller description for small screens */
+    }
+}
